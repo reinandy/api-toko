@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "31adc4fa-3b67-43c0-926e-b568ac1d66fc",
+		"name": "Tugas Toko",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/roles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "karyawan2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "karyawan2",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "karyawan2",
+									"type": "text"
+								},
+								{
+									"key": "role_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update By id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "karyawan2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "karyawan2",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "karyawan 2",
+									"type": "text"
+								},
+								{
+									"key": "role_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/users/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menus",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/menus",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"menus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Menu 1",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "Menu 1 desc",
+									"type": "text"
+								},
+								{
+									"key": "pic",
+									"type": "file",
+									"src": "/C:/Users/Reinandy/Pictures/PP/2f2902ab0c3d78ccf6d8a7d03b2b148b.jpg"
+								},
+								{
+									"key": "price",
+									"value": "10000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/menus",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"menus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/menus/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"menus",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update By id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Menu 1",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "Menu 1 desccc",
+									"type": "text"
+								},
+								{
+									"key": "pic",
+									"type": "file",
+									"src": "/C:/Users/Reinandy/Pictures/PP/2f2902ab0c3d78ccf6d8a7d03b2b148b.jpg"
+								},
+								{
+									"key": "price",
+									"value": "10000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/menus/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"menus",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/menus/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"menus",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Receipts",
+			"item": [
+				{
+					"name": "Menu",
+					"item": [
+						{
+							"name": "Add Menu",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "menu_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/receipts/add-menu/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"receipts",
+										"add-menu",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Menu",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "menu_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/receipts/update-menu/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"receipts",
+										"update-menu",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Menu",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/receipts/delete-menu/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"receipts",
+										"delete-menu",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/receipts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"receipts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/receipts/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"receipts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/receipts/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"receipts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay By id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/receipts/pay/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"receipts",
+								"pay",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "owner",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "owner",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/report",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
