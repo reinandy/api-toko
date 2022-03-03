@@ -110,4 +110,36 @@ class UserController extends Controller
             ]);
         }
     }
+
+    public function login(Request $req)
+    {
+        try {
+            $user = User::with(['role'])->where('username', $req->username)->first();
+
+            if (empty($user)) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Username tidak ditemukan.'
+                ]);
+            }
+
+            if (!Hash::check($req->password, $user->password)) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Password salah.'
+                ]);
+            }
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Selamat datang '.$user->name.'.',
+                'data' => $user
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $th->getMessage()
+            ]);
+        }
+    }
 }

@@ -17,6 +17,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->post('login', 'UserController@login');
+
 $router->group([
     // 'middleware' => 'api',
     'prefix' => 'roles'
@@ -44,4 +46,25 @@ $router->group([
     $router->get('{id}', 'MenuController@show');
     $router->post('{id}', 'MenuController@update');
     $router->delete('{id}', 'MenuController@destroy');
+});
+
+$router->group([
+    // 'middleware' => 'api',
+    'prefix' => 'receipts'
+], function () use ($router) {
+    $router->post('', 'ReceiptController@store');
+    $router->get('{id}', 'ReceiptController@show');
+    $router->post('pay/{id}', 'ReceiptController@pay');
+    $router->delete('{id}', 'ReceiptController@destroy');
+
+    $router->post('add-menu/{id}', 'ReceiptController@addMenu');
+    $router->post('update-menu/{id}', 'ReceiptController@updateMenu');
+    $router->delete('delete-menu/{id}', 'ReceiptController@deleteMenu');
+});
+
+$router->group([
+    // 'middleware' => 'api',
+    'prefix' => 'report'
+], function () use ($router) {
+    $router->get('', 'ReportController@index');
 });
